@@ -1,0 +1,70 @@
+body{
+    background: rgb(86, 3, 69);
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    margin: 0;
+}
+.calsi{
+    margin: 100px auto;
+    width:350px;
+    align-items: center;
+    border: 5px solid rgb(168, 157, 157);
+    border-radius: 20px;
+    background-color:rgb(16, 15, 16) ;
+    color: antiquewhite;
+}
+p.calsitop{
+    color:white;
+    background-color: gray;
+    text-align:right;
+    text-shadow: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-variant: calc();
+}
+#tab{
+    margin: 50px;
+    border: 0;
+}
+.calsitop{
+margin: 20px;
+word-wrap: break-word;
+width:300px;
+border: 5px solid rgb(175, 160, 160);
+border-radius: 20px;
+overflow:hidden;
+height: 50px;
+text-align: end;
+padding: 5px 5px;
+}
+.calsibot{
+    margin:10px 20px 20px;
+    width:300px;
+    border:5px solid rgb(173, 152, 152);
+    border-radius: 20px;
+}
+.t1{
+text-align: center;
+border-radius: 20px;
+border:2px solid rgb(196, 181, 181);
+font-size: large;
+margin: 30px;
+cursor: pointer;
+}
+.t2{
+    text-align: center;
+border-radius: 20px;
+font-size: large;
+border:2px solid rgb(250, 214, 31) ;
+margin: 30px;
+cursor: pointer;
+}
+.t3{
+    text-align: center;
+    font-size: larger;
+border-radius: 20px;
+border:2px solid rgb(244, 21, 21);
+margin: 30px;
+cursor: pointer;
+}
+
