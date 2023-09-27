@@ -1,26 +1,46 @@
-function even(){
+function lcm(){
     var a=document.getElementById('t').value;
-    var x=parseFloat(a);
-    if(x%2==0){
-        s=""+a+" is Even number";
-        document.getElementById("top").innerHTML=s;
+    const sa = a.split(',');
+    p=sa[0];
+    for(let i=1;i<sa.length;i++){
+        q=sa[i];
+        p=tlcm(p,q);
     }
-    else{
-        s=""+a+" is not an Even number";
-        document.getElementById("top").innerHTML=s;
+    // s=
+    document.getElementById("top").innerHTML="LCM is "+p.toString();
+}
+function tlcm(num1,num2){
+    let min = (num1 > num2) ? num1 : num2;
+    while (true) {
+        if (min % num1 == 0 && min % num2 == 0) {
+            return min;
+        }
+        min++;
     }
 }
-function odd(){
+function HCF(){
     var a=document.getElementById('t').value;
-    var x=parseFloat(a);
-    if(x%2!=0){
-        s=""+a+" is Odd number";
-        document.getElementById("top").innerHTML=s;
+    const sa = a.split(',');
+    p=sa[0];
+    for(let i=1;i<sa.length;i++){
+        q=sa[i];
+        p=thcf(p,q);
     }
-    else{
-        s=""+a+" is not an Odd number";
-        document.getElementById("top").innerHTML=s;
+    // s=
+    document.getElementById("top").innerHTML="HCF is "+p.toString();
+    
+}
+function thcf(a,b){
+    let hcf;
+    for (let i = 1; i <= a && i <= b; i++) {
+
+        // check if is factor of both integers
+        if( a % i == 0 && b % i == 0) {
+            hcf = i;
+        }
     }
+    return hcf;
+    
 }
 function prime(){
     var a=document.getElementById('t').value;
@@ -64,17 +84,21 @@ function fact(){
     }
     document.getElementById('top').innerHTML=p;
 }
-function pal(){
-    var a=document.getElementById('t').value;
-    var t="";
-    var i;
-    for(i=(a.length)-1;i>=0;i--){
-        t=t+a.charAt(i);
+function factor(){
+    var x=document.getElementById('t').value;
+    f=0;
+    s=""
+    for(i=1;i<=Math.floor(x/2);i++){
+        if(x%i==0){
+           if(f==0){
+            s+=i.toString();
+            f=1;
+           }
+           else{
+            s=s+","+i.toString();
+           }
+        }
     }
-    if(a.localeCompare(t)==0){
-        document.getElementById('top').innerHTML=a+" is a palindrome";
-    }
-    else{
-        document.getElementById('top').innerHTML=a+" is not a palindrome";
-    }
+    // s=
+    document.getElementById("top").innerHTML=s;
 }
